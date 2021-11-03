@@ -1,0 +1,204 @@
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("./fonts/opensans/opensans-regular/OpenSans-Regular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: url("./fonts/opensans/opensans-bold/OpenSans-Bold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "robotoregular";
+  src: url("./fonts/roboto/roboto-regular/Roboto-Regular-webfont.woff")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotobold";
+  src: url("./fonts/roboto/roboto-bold/Roboto-Bold-webfont.woff")
+    format("woff2");
+
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "firacode-regular";
+  src: url("./fonts/firacode/firacode-regular/FiraCode-Regular.woff2")
+    format("woff");
+
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --font-roboto: "robotoregular";
+  --font-opensans: "OpenSans-Regular";
+  --font-firacode: "firacode-regular";
+  --font-roboto-bold: "robotobold";
+  --font-opensans-bold: "OpenSans-Bold";
+  --fontSize: 16px;
+  --bgColor1: #400042;
+  --bgColorVar2: #710275;
+  --textColor1: white;
+  --txtColor1: #400042;
+  --bgColorHover1: #ce0089;
+  --borderColor1: rgb(153, 153, 153);
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+body {
+  color: var(--txtColor1);
+  /* box-sizing: border-box; */
+  font-family: var(--font-roboto);
+  font-size: var(--fontSize);
+  background-color: #eee;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+a {
+  color: rgb(0, 100, 200);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: rgb(0, 80, 160);
+}
+
+.osr {
+  font-family: var(--font-opensans);
+}
+
+.rbr {
+  font-family: var(--font-roboto);
+}
+.fcr {
+  font-family: var(--font-firacode);
+}
+
+select {
+  /* box-sizing: border-box; */
+  border: 1px solid var(--txtColor1);
+  /* border-radius: 15px; */
+  padding: 2px;
+  font-family: var(--font-roboto);
+  /* margin: 5px; */
+  /* width: 100%; */
+}
+select:hover {
+  cursor: pointer;
+}
+select:disabled {
+  border: 1px solid var(--borderColor1);
+  outline: none;
+}
+
+input:disabled {
+  color: #ccc;
+}
+
+button {
+  border: none;
+  font-family: var(--font-roboto);
+
+  background: linear-gradient(
+    0deg,
+    var(--bgColor1) 0%,
+    var(--bgColorVar2) 100%
+  );
+  color: var(--textColor1);
+  /* border-radius: 4px; */
+  font-size: 12px;
+  outline: none;
+  padding: 5px;
+
+  min-width: 100px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+button:hover {
+  background: linear-gradient(
+    0deg,
+    var(--bgColorVar2) 0%,
+    var(--bgColor1) 100%
+  );
+  cursor: pointer;
+}
+
+button:disabled {
+}
+
+button:not(:disabled):active {
+}
+
+button:focus {
+}
+input[type="text"],
+input[type="password"],
+textarea {
+  font-size: var(--fontSize);
+  color: var(--txtColor1);
+  border: 1px solid var(--bgColor1);
+  padding: 5px;
+  /* margin: 5px; */
+  /* border-radius: 15px; */
+  text-align: center;
+  font-family: var(--font-roboto);
+  /* width: 100%; */
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border: 1px solid var(--bgColorHover1);
+}
+textarea {
+  /* box-sizing: content-box; */
+  width: 97%;
+  min-height: 60px;
+  resize: none;
+}
+h3 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5px;
+}
